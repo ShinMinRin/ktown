@@ -91,7 +91,7 @@
                     echo $livraison.' €';
                 
                 echo '</span></li>';
-                echo '<li>Total <span>'.$total.'</span></li>';
+                echo '<li>Total <span>'.$total.' €</span></li>';
                 echo '</ul>';
                 echo '<a class="btn btn-default update" href="">Mettre à jour</a>';
                 echo '<a class="btn btn-default check_out" href="">Valider le panier</a>';

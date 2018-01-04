@@ -35,9 +35,9 @@
                 <div class="shop-menu pull-right">
                     <ul class="nav navbar-nav">
                         <li><a href="#"><i class="fa fa-user"></i> Mon compte</a></li>
-                        <li><a href="#"><i class="fa fa-star"></i> Ma liste d'envies</a></li>
                         <li><a href="index.php?page=panier.php"><i class="fa fa-shopping-cart"></i> Panier</a></li>
-                        <li><a href="login.html"><i class="fa fa-lock"></i> Connexion</a></li>
+                        <li><a href="index.php?page=login.php"><i class="fa fa-lock"></i> Connexion</a></li>
+                        <li><a href="index.php?page=inscription.php"><i class="fa fa-users"></i> S'inscrire</a></li>
                     </ul>
                 </div>
             </div>

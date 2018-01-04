@@ -862,6 +862,12 @@ h2.title {
   right: 0;
 }
 
+.img-liste-prod{
+    heigt-min : 150px;
+    height-max: 200px;
+    width-max : 200px;
+}
+
 .productinfo h2{
 	color: #FE980F;
 	font-family: 'Roboto', sans-serif;
