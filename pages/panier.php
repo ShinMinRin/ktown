@@ -29,7 +29,7 @@
                             for ($i = 0; $i < $nbArticles; $i++) {
                                 echo '<tr>';
                                 echo '<td class="cart_product">';
-                                echo '<a href=""><img src="images2' . $liste[$i]['image'] . '" alt=""></a>'; //ajouter le lien en fonction de la page d'affichage de l'article
+                                echo '<a href=""><img src="images' . $liste[$i]['image'] . '" alt=""></a>'; //ajouter le lien en fonction de la page d'affichage de l'article
                                 echo '</td>';
 
                                 echo '<td class="cart_description">';

@@ -62,7 +62,7 @@ $max_par_ligne = 4;
 
 
 
-                        <table>
+                        <table id="produit-table">
                             <tr>
                                 <?php
                                 for ($i = 0; $i < $total_produit; $i++) {
@@ -74,9 +74,11 @@ $max_par_ligne = 4;
                                         <div class="product-image-wrapper">
                                             <div class="single-products">
                                                 <div class="productinfo text-center">
-                                                    <img class="img-liste-prod" src="images2<?php print $liste[$i]['image']; ?>" alt="" />
+                                                    <a href="index.php?page=detail.php&idprod=<?php print $liste[$i]['id_prod'] ?>">
+                                                    <div class="img-liste-prod" style="background-image:url(images<?php print $liste[$i]['image']; ?>)"></div>
                                                     <h2><?php print $liste[$i]['prix_unit']; ?> €</h2>
                                                     <p><?php print $liste[$i]['nom_prod']; ?></p>
+                                                    </a>
                                                     <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Ajouter au panier</a>
                                                 </div>
                                             </div>

@@ -17,8 +17,6 @@ include './admin/lib/php/fonctions_panier.php';
         <!--liens css-->
         <link href="admin/lib/css/bootstrap.min.css" rel="stylesheet">
         <link href="admin/lib/css/font-awesome.min.css" rel="stylesheet">
-        <link href="admin/lib/css/prettyPhoto.css" rel="stylesheet">
-        <link href="admin/lib/css/price-range.css" rel="stylesheet">
         <link href="admin/lib/css/animate.css" rel="stylesheet">
         <link href="admin/lib/css/main.css" rel="stylesheet">
         <link href="admin/lib/css/responsive.css" rel="stylesheet">
@@ -27,8 +25,6 @@ include './admin/lib/php/fonctions_panier.php';
         <script src="admin/lib/js/jquery.js"></script>
         <script src="admin/lib/js/bootstrap.min.js"></script>
         <script src="admin/lib/js/jquery.scrollUp.min.js"></script>
-        <script src="admin/lib/js/price-range.js"></script>
-        <script src="admin/lib/js/jquery.prettyPhoto.js"></script>
         <script src="admin/lib/js/main.js"></script>
         <script src="admin/lib/js/kt_function.js"></script>
 

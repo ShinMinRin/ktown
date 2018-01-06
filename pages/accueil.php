@@ -18,7 +18,7 @@
                                 <button type="button" class="btn btn-default get">Plus d'info</button>
                             </div>
                             <div class="col-sm-6">
-                                <img src="images2/home/bts-ly-L-vers.png" class="girl img-responsive" alt="BTS - Love Yourself" />
+                                <img src="images/home/bts-ly-L-vers.png" class="girl img-responsive" alt="BTS - Love Yourself" />
                             </div>
                         </div>
                         <div class="item">
@@ -29,7 +29,7 @@
                                 <button type="button" class="btn btn-default get">Plus d'info</button>
                             </div>
                             <div class="col-sm-6">
-                                <img src="images2/home/taeyeon-this-christmas.png" class="girl img-responsive" alt="Taeyeon - This Christmas" />
+                                <img src="images/home/taeyeon-this-christmas.png" class="girl img-responsive" alt="Taeyeon - This Christmas" />
                             </div>
                         </div>
 
@@ -41,7 +41,7 @@
                                 <button type="button" class="btn btn-default get">Plus d'info</button>
                             </div>
                             <div class="col-sm-6">
-                                <img src="images2/home/kard-you-me.png" class="girl img-responsive" alt="KARD - YOU & ME" />
+                                <img src="images/home/kard-you-me.png" class="girl img-responsive" alt="KARD - YOU & ME" />
                             </div>
                         </div>
 
