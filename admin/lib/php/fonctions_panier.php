@@ -14,22 +14,22 @@ function creationPanier(){
 }
 
 
-function ajouterArticle($id_prod,$nom_prod,$image,$prix_unit,$quantite){
+function ajouterArticle($id_prod,$n,$img,$p){
     //Si le panier existe
     if(creationPanier() && !isVerrouille()){
         //Si le produit existe déjà, on ajoute seulement la quantité
         $positionProduit = array_search($id_prod, $_SESSION['panier']['id_prod']);
         
         if($positionProduit !== false){
-            $_SESSION['panier']['quantite'][$positionProduit] += $quantite;
+            $_SESSION['panier']['quantite'][$positionProduit] += 1;
         }
-        else{
+        else{            
             //Sinon on ajoute le produit
             array_push($_SESSION['panier']['id_prod'], $id_prod);
-            array_push($_SESSION['panier']['nom_prod'], $nom_prod);
-            array_push($_SESSION['panier']['image'], $image);
-            array_push($_SESSION['panier']['prix_unit'], $prix_unit);
-            array_push($_SESSION['panier']['quantite'], $quantite);
+            array_push($_SESSION['panier']['nom_prod'], $n);
+            array_push($_SESSION['panier']['image'], $img);
+            array_push($_SESSION['panier']['prix_unit'], $p);
+            array_push($_SESSION['panier']['quantite'], 1);
         }
         
     }
@@ -97,19 +97,10 @@ function montantLigne($prix,$qte){
 }
 
 
-function montantGlobal(){
-    $total = 0;
-    
-    for($i = 0; $i < count($_SESSION['panier']['id_prod']); $i++){
-        $total += $_SESSION['panier']['quantite'][$i] * $_SESSION['panier']['prix_unit'];
-    }
-    return $total;
-}
 
-
-function fraisLivraison(){
+function fraisLivraison($montant){
     
-    if(montantGlobal()>35)
+    if($montant>35 || $montant==0)
         $frais = 0;
     else
         $frais = 5;

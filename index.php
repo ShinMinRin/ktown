@@ -1,8 +1,8 @@
 <?php
 include './admin/lib/php/adm_liste_include.php';
+include './admin/lib/php/fonctions_panier.php';
 $cnx = Connexion::getInstance($dsn, $user, $pass);
 session_start();
-include './admin/lib/php/fonctions_panier.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">

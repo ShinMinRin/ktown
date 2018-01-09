@@ -1,4 +1,5 @@
 <?php
+
 ////////////////////////////////////////////////////
 //Récupération des catégories
 ////////////////////////////////////////////////////
@@ -79,7 +80,15 @@ $max_par_ligne = 4;
                                                     <h2><?php print $liste[$i]['prix_unit']; ?> €</h2>
                                                     <p><?php print $liste[$i]['nom_prod']; ?></p>
                                                     </a>
-                                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Ajouter au panier</a>
+                                                    
+                                                    
+                                                    
+                                                    <a href="index.php?page=panier.php&AMP;action=ajout&AMP;id=<?php print $liste[$i]['id_prod']; ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Ajouter au panier</a>
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
                                                 </div>
                                             </div>
                                         </div>
