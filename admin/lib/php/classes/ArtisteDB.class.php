@@ -4,6 +4,7 @@ class ArtisteDB extends Artiste {
 
     private $_db;
     private $_artisteArray = array();
+    private $_artiste;
 
     public function __construct($cnx) {
         $this->_db = $cnx;
@@ -11,7 +12,7 @@ class ArtisteDB extends Artiste {
 
     public function getArtiste() {
         try {
-            $query = "SELECT * FROM artiste";
+            $query = "SELECT * FROM artiste ORDER BY nom_artiste ASC";
             $resultset = $this->_db->prepare($query);
             $resultset->execute();
             $data = $resultset->fetchAll();
@@ -23,7 +24,7 @@ class ArtisteDB extends Artiste {
 
         while ($data = $resultset->fetch()) {
             try {
-                $_artisteArray[] = new Produit($data);
+                $_artisteArray[] = new Artiste($data);
             } catch (PDOException $ex) {
                 print $ex->getMessage();
             }
@@ -32,6 +33,7 @@ class ArtisteDB extends Artiste {
         return $_artisteArray;
     }
     
+
     
     public function getArtisteByIdProd($id_prod){
         try {

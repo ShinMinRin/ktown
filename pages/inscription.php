@@ -17,7 +17,7 @@ if(isset($_POST['envoi_inscr'])){
     //var_dump($user);
     //print 'id de l user à insérer :'.$user[0];
    $c = new ClientDB($cnx);
-   $c->addClient($_POST, $user[0]);
+   $c->addClientWithUser($_POST, $user[0]);
     
 }
 ?>

@@ -167,7 +167,7 @@ if (!$erreur){
                 echo '<li>Total <span>'.$total.' €</span></li>';
                 echo '</ul>';
                 echo '<a class="btn btn-default update" href="">Mettre à jour</a>';
-                echo '<a class="btn btn-default check_out" href="">Valider le panier</a>';
+                echo '<a class="btn btn-default check_out" href="index.php?page=validation-panier.php&total='.$total.'">Valider le panier</a>';
                 echo '</div>';
                 echo '</div>';
             ?>

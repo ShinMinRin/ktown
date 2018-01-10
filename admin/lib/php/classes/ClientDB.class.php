@@ -32,7 +32,24 @@ class ClientDB extends Client {
         return $_clientArray;
     }
     
-    public function addClient(array $data, $user){
+    
+    public function getLastClient(){
+        try{
+            $query = "SELECT id_client FROM client WHERE id_client=LAST_INSERT_ID()";
+            $resultset = $this->_db->prepare($query);
+            $resultset->execute();
+            $data = $resultset->fetch();
+            
+            
+        } catch (PDOException $ex) {
+            print $ex->getMessage();
+        }
+        
+        return $data;
+    }
+    
+    
+    public function addClientWithUser(array $data, $user){
         $query = "INSERT INTO client (Nom,Prenom,Naiss,Rue,NumRue,CP,Ville,Pays,Tel,id_user) "
                 ."VALUES (:n,:p,:naiss,:rue,:num,:cp,:v,:pays,:t,:user)";
         
@@ -54,6 +71,32 @@ class ClientDB extends Client {
             
         } catch (PDOException $ex) {
             print "<br/>Echec de l'insertion<br/>";
+            print $ex->getMessage();
+        }
+        
+    }
+    
+    public function addClient(array $data){
+        $query = "INSERT INTO client (Nom,Prenom,Naiss,Rue,NumRue,CP,Ville,Pays,Tel) "
+                ."VALUES (:n,:p,:naiss,:rue,:num,:cp,:v,:pays,:t)";
+        
+        
+        try{
+            
+            $resultset = $this->_db->prepare($query);
+            $resultset->bindValue(':n', $data['nom'], PDO::PARAM_STR);
+            $resultset->bindValue(':p', $data['prenom'], PDO::PARAM_STR);
+            $resultset->bindValue(':naiss', $data['naiss'], PDO::PARAM_STR);
+            $resultset->bindValue(':rue', $data['rue'], PDO::PARAM_STR);
+            $resultset->bindValue(':num', $data['num'], PDO::PARAM_INT);
+            $resultset->bindValue(':cp', $data['cp'], PDO::PARAM_INT);
+            $resultset->bindValue(':v', $data['ville'], PDO::PARAM_STR);
+            $resultset->bindValue(':pays', $data['pays'], PDO::PARAM_STR);
+            $resultset->bindValue(':t', $data['tel'], PDO::PARAM_STR);
+            $resultset->execute();
+            
+        } catch (PDOException $ex) {
+            print "<br/>Echec de l'insertion client<br/>";
             print $ex->getMessage();
         }
         

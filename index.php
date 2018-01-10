@@ -56,10 +56,7 @@ session_start();
                     $_SESSION['page'] = "./pages/".$_GET['page'];
                 }
             }
-            
-            //ici c'est comme ça que ma prof nous a montré, on a le layout en index et les pages ne sont qu'une partie du layout, en gros
-            // Ou est le produit.php ici ?
-            //print $_SESSION['page'];  
+          
             if (file_exists($_SESSION['page'])) {
                 include $_SESSION['page'];
             } else {
